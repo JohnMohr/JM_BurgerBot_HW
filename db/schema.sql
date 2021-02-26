@@ -10,12 +10,4 @@ CREATE TABLE burgers
     PRIMARY KEY (id)
 );
 
-INSERT INTO burgers (burger_name, devoured)
-VALUES
-('Cheeseburger', false),
-('Mushroom Swiss', false),
-('Bacon Cheeseburger', true)
-('Western BBQ Burger', true),
-('Spicy Chicken Sammy', false)
-
 SELECT * FROM burgers;
