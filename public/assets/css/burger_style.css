@@ -36,19 +36,19 @@ li {
 
 /* Header */
 h1 {
-  font-family: 'Bungee Shade', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
 }
 
 h2 {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Roboto', monospace;
   margin-bottom: 28px;
 }
 
 
 /* Buttons */
 button {
-  font-family: 'Open Sans', monospace;
+  font-family: 'Roboto', monospace;
   margin-left: 15px;
   background-color: rgb(89, 89, 89);
   color: white;
