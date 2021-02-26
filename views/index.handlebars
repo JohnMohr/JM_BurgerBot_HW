@@ -10,9 +10,9 @@
 
 <ul>
     {{#each burgers}}
-      {{#if devoured}}
+      {{#unless devoured}}
         {{> burgers/burger-block devoured=false}}
-      {{/if}}
+      {{/unless}}
     {{/each}}
 </ul>
 </div>
@@ -21,9 +21,9 @@
 
 <ul>
     {{#each burgers}}
-      {{#unless devoured}}
+      {{#if devoured}}
         {{> burgers/burger-block devoured=true}}
-      {{/unless}}
+      {{/if}}
     {{/each}}
 </ul>
 </div>
@@ -39,6 +39,6 @@
     <div class="form-group">
       <textarea type="text" id="burger" rows="4" name="name" placeholder="Bacon Cheeseburger"></textarea>
     </div>
-    <button type="submit" class="form-button">Add Burger</button>
+    <button type="submit" class="form-button">Add a Burger</button>
   
 </div>

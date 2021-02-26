@@ -1,30 +1,26 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+const orm = require('../config/orm.js');
 
-var burger = {
-  all: function(cb) {
-    orm.all("burgers", function(res) {
-      console.log('burger.js res: ', res);
-      cb(res);
-    });
-  },
-  // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.create("burgers", cols, vals, function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
-  delete: function(condition, cb) {
-    orm.delete("burgers", condition, function(res) {
-      cb(res);
-    });
-  }
+// Code that will call the ORM functions using burger specific input for the ORM.
+const burger = {
+    all: function (cb) {
+        // SELECT * FROM burgers
+        // Returns RowDataPacket array results from burgers table to router
+        orm.all("burgers", res => cb(res));
+    },
+    // The variables cols and vals are arrays.
+    create: function (cols, vals, cb) {
+        // INSERT INTO burgers VALUES ?
+        orm.create("burgers", cols, vals, res => cb(res));
+    },
+    // UPDATE burgers SET columns WHERE condition
+    update: function (objColVals, condition, cb) {
+        orm.update("burgers", objColVals, condition, res => cb(res));
+    },
+    // DELETE FROM burgers WHERE condition
+    delete: function (condition, cb) {
+        orm.delete("burgers", condition, res => cb(res));
+    }
 };
 
-// Export the database functions for the controller (burgersController.js).
+// Export the database functions for the controller (burgers_controller.js).
 module.exports = burger;
