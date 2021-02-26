@@ -1,5 +1,9 @@
+<div class="container">
 <h1>BURGERS</h1>
+</div>
 
+<div class="burger-list">
+<div class="devoured-burgers">
 <h2>You ate these burgers.</h2>
 
 <ul>
@@ -9,7 +13,9 @@
       {{/unless}}
     {{/each}}
 </ul>
+</div>
 
+<div class="not-devoured">
 <h2>You want you should order somthing?</h2>
 
 <ul>
@@ -19,18 +25,19 @@
       {{/if}}
     {{/each}}
 </ul>
+</div>
+</div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+
+<div class="container">
+  <h2>Add a Burger:</h2>
+  <h4>Enter a burger you'd like to eat, and click submit</h4>
+  <form class="create-form">
+    
+    <p>Burger Name:</p>
     <div class="form-group">
-        <label for="bu"> What kind of burger?</label>
-        <input type="text" id="bu" name="burger_name" placeholder="Bacon Cheeseburger">
+      <textarea type="text" id="burger" rows="4" name="name" placeholder="Bacon Cheeseburger"></textarea>
     </div>
-
-    <div class ="form-group">
-        <label for="devoured">So, anyways, you hungry?</label><br>
-        <input type="radio" name="devoured" value="1" checked> HANGRY!<br>
-        <input type="radio" name="devoured" value="0"> Not right now, just having burger dreams.
-    </div>
-    <button type="submit">Add Burger</button>
-</form>
+    <button type="submit" class="form-button">Add Burger</button>
+  
+</div>
