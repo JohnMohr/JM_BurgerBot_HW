@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 40px;
-  background-color: darkorange;
+  background-image: linear-gradient( darkorange, #FDCA21, darkorange);
 }
 
 .container {

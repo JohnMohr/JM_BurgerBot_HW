@@ -1,12 +1,32 @@
 <div class="container">
-<h1 class="text-center">Welcome to Gross Burger,</h1>
-<h3 class="text-center">Home of the Gross Burger.</h3>
+  <div class="row">
+    <div class="col-6">
+      <h1>Welcome to Gross Burger,</h1>
+      <h3>Home of the Gross Burger.</h3>
+
+    </div>
+    <div class="col-6">
+      <h2>Can I Take Your Order?:</h2>
+      <h4>We Make It Our Way</h4>
+    <form class="create-form">
+    
+      <p>Burger Name:</p>
+    <div class="form-group">
+      <textarea type="text" id="burger" rows="4" name="name" placeholder="Bacon Cheeseburger"></textarea>
+    </div>
+      <button type="submit" class="form-button">Add a Burger</button>
+    </div>
+
+  </div>
+
 </div>
+
+
 
 <div class="burger-list">
 
 <div class="not-devoured">
-<h2>Can I take Your Order?</h2>
+<h2>You Have These Burgers.</h2>
 
 <ul>
     {{#each burgers}}
@@ -17,7 +37,7 @@
 </ul>
 </div>
 <div class="devoured-burgers">
-<h2>You ate these burgers. Gross.</h2>
+<h2>You ate (most) of these burgers. Gross.</h2>
 
 <ul>
     {{#each burgers}}
@@ -30,15 +50,3 @@
 </div>
 
 
-<div class="container">
-  <h2>Add a Burger:</h2>
-  <h4>Enter the Gross Burger you dream of.</h4>
-  <form class="create-form">
-    
-    <p>Burger Name:</p>
-    <div class="form-group">
-      <textarea type="text" id="burger" rows="4" name="name" placeholder="Bacon Cheeseburger"></textarea>
-    </div>
-    <button type="submit" class="form-button">Add a Burger</button>
-  
-</div>
