@@ -17,7 +17,7 @@ const printQuestionMarks = num => {
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
-const objToSql = ob => {
+function objToSql(ob) {
   let arr = [];
 
   // loop through the keys and push the key/value as a string int arr
@@ -41,16 +41,16 @@ const objToSql = ob => {
 
 // Object for all our SQL statement functions.
 const orm = {
-  all: (tableInput, cb) => {
+  all: function (tableInput, cb) {
     let queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
   },
-  create: (table, cols, vals, cb) => {
+  create: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -71,7 +71,7 @@ const orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: (table, objColVals, condition, cb) => {
+  update: function (table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -88,7 +88,7 @@ const orm = {
       cb(result);
     });
   },
-  delete: (table, condition, cb) => {
+  delete: function (table, condition, cb) {
     let queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
     queryString += condition;
